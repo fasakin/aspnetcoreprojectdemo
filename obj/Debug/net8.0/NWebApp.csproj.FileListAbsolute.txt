@@ -137,3 +137,5 @@ C:\data\aspnetprojects\NWebApp\NWebApp\obj\Debug\net8.0\refint\NWebApp.dll
 C:\data\aspnetprojects\NWebApp\NWebApp\obj\Debug\net8.0\NWebApp.pdb
 C:\data\aspnetprojects\NWebApp\NWebApp\obj\Debug\net8.0\NWebApp.genruntimeconfig.cache
 C:\data\aspnetprojects\NWebApp\NWebApp\obj\Debug\net8.0\ref\NWebApp.dll
+C:\data\aspnetprojects\NWebApp\NWebApp\bin\Debug\net8.0\libman.json
+C:\data\aspnetprojects\NWebApp\NWebApp\bin\Debug\net8.0\NWebApp.staticwebassets.runtime.json

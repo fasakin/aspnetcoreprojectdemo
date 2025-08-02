@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using NWebApp.Context;
+using NWebApp.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<DataContext>(options =>
@@ -10,6 +11,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 var app = builder.Build();
 
+app.UseMiddleware<TestMiddleware>();
 app.MapGet("/", () => "Hello World!");
 var context = app.Services.CreateScope()
     .ServiceProvider.GetService<DataContext>();

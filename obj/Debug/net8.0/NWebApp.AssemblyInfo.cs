@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("65c78669-4434-4a53-9eff-bf23122f582b")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("NWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab582829559e85883b159eba7051f5dd1028568d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+883fd749a02a19499a3d28bfac599429b2428be4")]
 [assembly: System.Reflection.AssemblyProductAttribute("NWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

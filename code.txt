@@ -1,0 +1,42 @@
+﻿const string BASEURL = "api/products";
+
+app.MapGet($"{BASEURL}/{{id}}", async (HttpContext context, DataContext dataContext) =>
+{
+    var productId = context.Request.RouteValues["id"] as string;
+    if (productId != null)
+    {
+        var prod = await dataContext.Products.FindAsync(long.Parse(productId));
+
+        if (prod == null)
+        {
+            context.Response.StatusCode = StatusCodes.Status404NotFound;
+        }
+        else
+        {
+            context.Response.ContentType = "application/json";
+            await context.Response.WriteAsync(JsonSerializer.Serialize<Product>(prod));
+        }
+    }
+});
+
+
+app.MapGet($"{BASEURL}", async (HttpContext context, DataContext dataContext) =>
+{
+    context.Response.ContentType = "application/json";
+    await context.Response.WriteAsync(JsonSerializer
+        .Serialize<IEnumerable<Product>>(dataContext.Products));
+});
+
+app.MapPost(BASEURL, async (HttpContext context, DataContext dataContext, [FromBody]Product? product) =>
+{
+    // Product? product = await JsonSerializer.DeserializeAsync<Product>(context.Request.Body);
+    if (product != null)
+    {
+        await dataContext.Products.AddAsync(product);
+        await dataContext.SaveChangesAsync();
+        context.Response.StatusCode = StatusCodes.Status200OK;
+        // context.Response.ContentType = "application/json";
+        // await context.Response.WriteAsync(JsonSerializer
+        //     .Serialize<Product>(product));
+    }
+});

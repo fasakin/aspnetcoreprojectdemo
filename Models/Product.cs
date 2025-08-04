@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace NWebApp.Models;
 
@@ -9,7 +10,9 @@ public class Product
     [Column(TypeName = "decimal(8, 2)")]
     public decimal Price { get; set; }
     public long CategoryId { get; set; }
+
     public Category? Category { get; set; }
     public long SupplierId { get; set; }
+
     public Supplier? Supplier { get; set; }
 }

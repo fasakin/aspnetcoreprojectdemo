@@ -139,3 +139,12 @@ C:\data\aspnetprojects\NWebApp\NWebApp\obj\Debug\net8.0\NWebApp.genruntimeconfig
 C:\data\aspnetprojects\NWebApp\NWebApp\obj\Debug\net8.0\ref\NWebApp.dll
 C:\data\aspnetprojects\NWebApp\NWebApp\bin\Debug\net8.0\libman.json
 C:\data\aspnetprojects\NWebApp\NWebApp\bin\Debug\net8.0\NWebApp.staticwebassets.runtime.json
+C:\data\aspnetprojects\NWebApp\NWebApp\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\data\aspnetprojects\NWebApp\NWebApp\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\data\aspnetprojects\NWebApp\NWebApp\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\data\aspnetprojects\NWebApp\NWebApp\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+C:\data\aspnetprojects\NWebApp\NWebApp\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\data\aspnetprojects\NWebApp\NWebApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\data\aspnetprojects\NWebApp\NWebApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\data\aspnetprojects\NWebApp\NWebApp\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\data\aspnetprojects\NWebApp\NWebApp\obj\Debug\net8.0\NWebApp.MvcApplicationPartsAssemblyInfo.cs

@@ -8,6 +8,7 @@ using NWebApp.Models;
 
 namespace NWebApp.Controllers;
 
+[ApiExplorerSettings(GroupName = "v2")]
 [ApiController]
 [Route("api/[controller]")]
 [EnableRateLimiting("FixedWindows")]
@@ -23,11 +24,14 @@ public class ProductsController : ControllerBase
     [HttpGet]
     public IAsyncEnumerable<Product> GetProducts()
     {
+        
         return _dataContext.Products.AsAsyncEnumerable();
     }
 
     [HttpGet("{id}")]
     [DisableRateLimiting]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> GetProduct(long id, [FromServices] ILogger<ProductsController> logger)
     {
         logger.LogInformation("GetProduct Action Invoked");
@@ -38,6 +42,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpPost]
+    [ProducesResponseType(StatusCodes.Status201Created)]
     public async Task<IActionResult> SaveProduct( ProductBindingTarget product)
     {
       
@@ -48,6 +53,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
     public async Task<IActionResult> UpdateProduct(long id,  ProductBindingTarget product)
     {
         var prod = await  _dataContext.Products.FindAsync(id);
